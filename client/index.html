@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FastAPI + SQLite Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 500px;
+      margin: 40px auto;
+    }
+    fieldset {
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="number"] {
+      width: 100%;
+      padding: 6px;
+      margin-top: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 15px;
+      padding: 8px 16px;
+    }
+    .result {
+      margin-top: 10px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1>FastAPI & SQLite Demo</h1>
+
+  <!-- ======== Section 1: Submit Name + DOB ======== -->
+  <fieldset>
+    <legend>Submit Name + Date of Birth</legend>
+    <label for="nameInput">Name:</label>
+    <input type="text" id="nameInput" placeholder="Your name" />
+
+    <label for="dobInput">Date of Birth:</label>
+    <input type="date" id="dobInput" />
+
+    <button id="submitUserBtn">Submit to Server</button>
+    <div id="userMsg" class="result"></div>
+  </fieldset>
+
+  <!-- ======== Section 2: Add 2 Numbers (Client-Side) ======== -->
+  <fieldset>
+    <legend>Add 2 Numbers (Client-Side)</legend>
+    <label for="numA">Number A:</label>
+    <input type="number" id="numA" placeholder="e.g. 3" />
+
+    <label for="numB">Number B:</label>
+    <input type="number" id="numB" placeholder="e.g. 4" />
+
+    <button id="addBtn">Compute Sum</button>
+    <div id="sumResult" class="result"></div>
+  </fieldset>
+
+  <!-- Load external JS -->
+  <script src="script.js"></script>
+</body>
+</html>
+
