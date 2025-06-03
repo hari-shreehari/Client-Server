@@ -38,16 +38,6 @@ async def init_db():
             )
             """
         )
-        await db.execute(
-            """
-            CREATE TABLE IF NOT EXISTS additions (
-                id   INTEGER PRIMARY KEY AUTOINCREMENT,
-                a    REAL NOT NULL,
-                b    REAL NOT NULL,
-                sum  REAL NOT NULL
-            )
-            """
-        )
         await db.commit()
 
 
@@ -64,7 +54,7 @@ async def serve_frontend():
     Serve the HTML file (index.html) that contains the forms + JS.
     (Make sure index.html sits next to main.py in the same directory.)
     """
-    return FileResponse("index.html", media_type="text/html")
+    return JSONResponse({"Message": "Server is up and running"})
 
 
 @app.post("/submit-data", summary="Receive name + dob and store in SQLite")

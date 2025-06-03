@@ -27,9 +27,12 @@ Users can submit their Name + DOB to the backend (which writes into a SQLite DB)
 
 > These steps assume you’re using VS Code, but they also work in any terminal.
 
-1. **Clone or download the repo**.  
+1. **Clone or download the repo and enter it**.  
     ```bash
     git clone https://github.com/hari-shreehari/Client-Server
+    ```
+    ```bash
+    cd Client-Server
     ```
 
 2. **Open the project in VS Code** (or your editor).  
